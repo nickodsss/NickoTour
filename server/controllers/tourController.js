@@ -59,24 +59,25 @@ class Controller {
             if (!result) {
                 throw { name: 'ErrorData' }
             }
-            const { data } = await axios({
-                method: 'POST',
-                url: `https://api.qr-code-generator.com/v1/create?access-token=${process.env.TOKEN_QR}`,
-                data: {
-                    "frame_name": "no-frame",
-                    "qr_code_text": `${result.linkNews}`,
-                    "image_format": "SVG",
-                    "qr_code_logo": "scan-me-square",
-                    "background_color": "#ffffff",
-                    "foreground_color": "#fa6e79",
-                    "marker_right_inner_color": "#2d7cda",
-                    "marker_right_outer_color": "#00bfff",
-                    "marker_left_template": "version13",
-                    "marker_right_template": "version13",
-                    "marker_bottom_template": "version13"
-                }
-            })
-            result.dataValues.qr = data
+            // QR CODE API already Expired
+            // const { data } = await axios({
+            //     method: 'POST',
+            //     url: `https://api.qr-code-generator.com/v1/create?access-token=${process.env.TOKEN_QR}`,
+            //     data: {
+            //         "frame_name": "no-frame",
+            //         "qr_code_text": `${result.linkNews}`,
+            //         "image_format": "SVG",
+            //         "qr_code_logo": "scan-me-square",
+            //         "background_color": "#ffffff",
+            //         "foreground_color": "#fa6e79",
+            //         "marker_right_inner_color": "#2d7cda",
+            //         "marker_right_outer_color": "#00bfff",
+            //         "marker_left_template": "version13",
+            //         "marker_right_template": "version13",
+            //         "marker_bottom_template": "version13"
+            //     }
+            // })
+            // result.dataValues.qr = data
             response.status(200).json(result)
         } catch (err) {
             next(err)

@@ -1,0 +1,13 @@
+<script>
+import Navbar from '../components/Navbar.vue'
+import { RouterView } from 'vue-router';
+export default {
+    name: 'HomePage',
+    components: { RouterView, Navbar }
+}
+</script>
+<template>
+    <Navbar />
+    <RouterView />
+</template>
+<style scoped></style>
