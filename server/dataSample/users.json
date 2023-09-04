@@ -1,0 +1,20 @@
+[
+    {
+        "username": "Aaa",
+        "email": "a@gmail.com",
+        "password": "12345",
+        "isSubscribed": false
+    },
+    {
+        "username": "Bbb",
+        "email": "b@gmail.com",
+        "password": "12345",
+        "isSubscribed": true
+    },
+    {
+        "username": "Ccc",
+        "email": "c@gmail.com",
+        "password": "12345",
+        "isSubscribed": false
+    }
+]
